@@ -9,8 +9,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
+
 
 /*
 * Selenium Is a Robust tool that support rapid development of test website automation Feature->{open source , cross browser , multilingual ,cross browser }
@@ -45,6 +47,18 @@ if there is a wrong in syntax back to selenium documentation
     //Be Noted when use groups must config in regression.xml file tag runner include method name  .
     @Test
     public void getname() {
+/*
+
+       // Hard Assertion  kill process when found stop running
+        //Assert.assertEquals(AR.contains("ER"),"Error Message ");
+
+        //Soft assertion we write more than one assertion form tc in each assert write a message to discrement it
+        SoftAssert soft=new SoftAssert();
+        soft.assertEquals("","");
+        soft.assertAll();//without this line no softassert will running
+
+        */
+
 
         /*
         * Findelement -> Retun single instant if not found will return Exception
