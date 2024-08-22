@@ -303,7 +303,30 @@ public class Register {
         ChromePref.put("","");
         optionss.setExperimentalOption("","");
         optionss.setCapability("",true);
-    return  optionss;
+        return  optionss;
+    }
+
+    //Help Us to draw Circle & Rectanguler
+    @Test(priority = 12,enabled = false)
+    public void htmlCanvas() {
+        WebElement Drawlist=Driver.findElement(By.id(""));
+        WebElement Canvas= Driver.findElement(By.id(""));
+        Select Slct=new Select(Drawlist);
+        Slct.selectByValue("");
+        Actions Builder=new Actions(Driver);
+        Builder.clickAndHold(Canvas).moveByOffset(,).moveByOffset(,).moveByOffset(,).moveByOffset(,).release().perform();
+    }
+
+    //Html5 Web Application Vedio Player
+    @Test(priority = 13,enabled = false)
+    public void Html5VedioPlayer() {
+
+        WebElement VedioPlayer= Driver.findElement(By.id(""));
+        JavascriptExecutor Js=(JavascriptExecutor) Driver;
+        String Src=(String) Js.executeScript("Return arguments[0].duration",VedioPlayer);
+        Assert.assertEquals("",Source);
+
+
     }
 
     @AfterTest
